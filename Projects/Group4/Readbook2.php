@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    header {
+      background-color: #666;
+      height:86px;
+
+    }
+    section{
+      }
+    .main{
+      float:right;
+    }
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+    .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .dropdown a:hover {
+    background-color: #ddd;
+  }
+
+  .show {
+    display: block;
+  }
+.container{
+  padding:30px;
+  display: flex;
+}
+.container1{
+
+}
+
+.container2{
+  padding: 5%;
+  font-size: 20px;
+/*  border: 1px solid red;*/
+}
+.border{
+  background-color: green;
+  border: 2px solid red;
+  border-radius: 5px;
+  color: white;
+  padding:10px;
+
+
+}
+
+
+  </style>
+  </head>
+  <body>
+    <header>
+      <div class="main">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><img src="user.jpg" style="height:50px;width:50px;"></img></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">My profile</a>
+          <a href="#about">My books</a>
+          <a href="#contact">Sign out</a>
+        </div>
+      </div>
+    </div>
+      <script>
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+      </script>
+    </header>
+    <section style="background-color:yellow">
+      <div class="container">
+        <div class="container1">
+          <img src="5172SCQ5VaL.jpg" width="500px" height="470px"></img>
+          </div>
+          <div class="container2"><table><tr><td>Format</td><td>:</td><td>Kindle Edition</td></tr>
+          <h2>Details</h2>
+          <tr><td>File Size</td><td>:</td><td>3670 KB</td></tr>
+          <tr><td>Print Length</td><td>:</td><td>402 pages</td>
+          <tr><td>Publisher</td><td>:</td><td> Thomas & Mercer (30 June 2015)</td>
+          <tr><td>Sold by</td><td>:</td><td> E-Library</td></tr>
+          <tr><td>Language</td><td>:</td><td> English</td></tr></table>
+          <p><a href="paymentform.html" class="border">Buy now</a></p>
+
+      </div>
+    </div>
+    </section>
+  </body>
+</html>

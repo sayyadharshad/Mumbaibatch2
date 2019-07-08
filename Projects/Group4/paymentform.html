@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Payment Checkout Form</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+	<style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background-image: url(ol4.jpg);
+	background-size: cover;
+}
+
+.wrapper{
+
+
+}
+.payment{
+background:black;
+max-width: 360px;
+margin: 80px auto;
+opacity: 0.8;
+height: auto;
+padding: 30px;
+padding-top: 70px;
+border-radius: 5px;
+position: relative;
+
+
+
+}
+
+.payment h2{
+text-align: center;
+letter-spacing: 2px;
+margin-bottom: 40px;
+color: white;
+font-weight: bold;
+}
+
+.form .label{
+display: block;
+color: white;
+margin-bottom: 6px;
+}
+
+.input{
+padding: 13px 0px 13px 25px;
+width: 100%;
+text-align: center;
+border: 2px solid #dddddd;
+border-radius: 5px;
+letter-spacing: 1px;
+word-spacing: 3px;
+outline: none;
+font-size: 16px;
+color: black;
+}
+
+.card-grp{
+display: flex;
+justify-content: space-between;
+}
+
+.card-item{
+width: 48%;
+}
+
+.space{
+margin-bottom: 20px;
+}
+
+.icon-relative{
+position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+position: absolute;
+bottom: 12px;
+left: 15px;
+font-size: 20px;
+color:red;
+}
+
+.btn{
+margin-top: 40px;
+background: orange;
+padding: 12px;
+text-align: center;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+position: relative;
+-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.btn .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.btn .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+
+
+
+<div class="wrapper">
+  <div class="payment">
+
+
+
+
+    <h2>Debit Card</h2>
+    <div class="form">
+      <div class="card space icon-relative">
+        <label class="label">Card holder:</label>
+        <input type="text" class="input" placeholder="Name on Card">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Card number:</label>
+        <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+        <i class="far fa-credit-card"></i>
+      </div>
+      <div class="card-grp space">
+        <div class="card-item icon-relative">
+          <label class="label">Expiry date:</label>
+          <input type="text" name="expiry-data" class="input" data-mask="00 / 00"  placeholder="00 / 00">
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="card-item icon-relative">
+          <label class="label">CVV:</label>
+          <input type="text" class="input" data-mask="000" placeholder="000">
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+
+      <div class="btn" onclick="myFunction()">
+        Pay
+				<span class="popuptext" id="myPopup">Payment is successful</span>
+      </div><br>
+			<center><a style=" height:30px; text-decoration:none; color:yellow;line-height: 25px;" href="index3.html">BACK TO HOME </a></center>
+    </div>
+  </div>
+</div>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+
+</body>
+</html>

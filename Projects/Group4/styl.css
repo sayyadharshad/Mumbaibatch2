@@ -1,0 +1,125 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato' sans-serif;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: url("ol4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  background-color: #0009;
+}
+h2{
+  padding:40px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+
+}
+input{
+  height: 50px;
+  width:90%;
+  border:none;
+  margin: 0 auto;
+  display: block;
+  background-color: #fad0c4;
+}
+input:hover,input:focus{
+  color: black;
+  outline: none;
+  border-bottom: 1px solid red;
+}
+.email,.pwd{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-left: 20px;
+  text-transform: uppercase;
+  color: #858585;
+  font-weight: lighter;
+  transition: 0.5s all;
+}
+.forget{
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.forget .link{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+  transition: 0.5s all;
+}
+.btn{
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.btn nav{
+
+  width:100%;
+
+  height: 60px;
+
+/*  background-color: #0009;*/
+
+  line-height: 60px;
+
+}
+.btn nav ul li{
+
+ list-style-type: none;
+ width: 200px;
+ display: inline-block;
+
+ transition: 0.8s all;
+
+}
+.btn nav ul li:hover{
+
+background-color: #f39d1a;
+
+}
+
+.btn nav ul li a{
+
+text-decoration: none;
+
+color:#9FEDD7;
+font-size: 20px;
+padding: 30px;
+
+
+}
+
+/*li {
+  cursor: pointer;
+  width: 500px;
+  height: 30px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.5s all;
+}
+/*button:nth-of-type(1){
+  background-color:#66a6ff;
+}
+button:nth-of-type(2){
+  background-color: #ff7eb3;
+}
+button span {
+  display: block;
+  transform: translateX(0);
+  transition: 0.5s all;
+}
+button:hover span{
+  transform: translateX(30px);
+}*/

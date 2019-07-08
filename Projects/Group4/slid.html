@@ -1,0 +1,133 @@
+<html>
+<head>
+<title> image slideshow</title>
+<link rel="stylesheet" type="text/css" href="firsthome.css">
+<style>
+.slideshow{
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 600px;
+  background-color: skyblue;
+  background-image: url("pco5dKqLi.jpg");
+  box-sizing: border-box;
+}
+.content{
+  margin: auto;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
+}
+.content-carrousel{
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotar 15s infinite linear;
+  transform-style: preserve-3d;
+
+}
+.content-carrousel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.content-carrousel figure{
+  width: 100%;
+  height: 120px;
+  border: 1px solid #4d444d;
+  position: absolute;
+}
+.content-carrousel figure:nth-child(1){
+  transform: rotateY(0deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(2){
+  transform: rotateY(40deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(3){
+  transform: rotateY(80deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(4){
+  transform: rotateY(120deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(5){
+  transform: rotateY(160deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(6){
+  transform: rotateY(200deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(7){
+  transform: rotateY(240deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(8){
+  transform: rotateY(280deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(9){
+  transform: rotateY(320deg) translateZ(300px);
+}
+
+.shadow{
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 2px;
+}
+.content-carrousel img{
+  image-rendering:auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%
+}
+.content-carrousel img:hover{
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+@keyframes rotar{
+  from{
+    transform: rotateY(0deg);
+  } to{
+    transform: rotateY(360deg);
+  }
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <div id="main">
+      <nav>
+        <img src="ol2.png" width="100px" height="90px">
+          <ul>
+            <li><a href="index3.html">Home</a></li>
+            <li><a href="slid.html">Gallary</a></li>
+            <li><a href="login.html">Sign up</a></li>
+            <li><a href="register.html">Sign in</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+<section class="slideshow">
+<div class="content">
+<div class="content-carrousel">
+<figure class="shadow"><img src ="51-ytMxd7YL.jpg"><a href="Readbook1.html"></a></figure>
+<figure class="shadow"><img src ="51tOp7iA4oL.jpg"></figure>
+<figure class="shadow"><img src ="517yua7XQ3L.jpg"></figure>
+<figure class="shadow"><img src ="28870947.jpg"></figure>
+<figure class="shadow"><img src ="5172SCQ5VaL.jpg"></figure>
+<figure class="shadow"><img src ="510Py6thLsL.jpg"></figure>
+<figure class="shadow"><img src ="5172SCQ5VaL(1).jpg"></figure>
+<figure class="shadow"><img src ="51FCCrKZDzL.jpg"></figure>
+<figure class="shadow"><img src ="517yua7XQ3L.jpg"></figure>
+</div>
+</div>
+</section>
+  <footer>
+    <div id="foot">
+      <nav>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  </body>
+</html>
