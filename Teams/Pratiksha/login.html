@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="login.css">
+    <title>Registration Form Creation</title>
+  </head>
+  <body>
+
+    <div class="register">
+      <form method="post" id="register" action="">
+        <h2>Register Here</h2>
+        <label> First Name :</label><br>
+        <input type="text" name="fname" pattern="[A-Za-z]{3,}" required id="name" placeholder="enter first name"><br><br>
+        <label> Last Name :</label><br>
+        <input type="text" name="lname" required id="name" placeholder="enter last name"><br><br>
+        <label> Mobile Number :</label><br>
+        <select id="ph">
+          <option>+91</option>
+          <option>+92</option>
+          <option>+93</option>
+          <option>+94</option>
+        </select>
+        <input type="number" name="MNum" required id="num" placeholder="enter mobile number"><br><br>
+        <label> Email :</label><br>
+        <input type="email" name="email" id="name" placeholder="enter email"><br><br>
+        <label> Password :</label><br>
+        <input type="password" name="pass" id="name" placeholder="enter password"><br><br>
+        <label> Re-Enter Password :</label><br>
+        <input type="password" name="pass" id="name" placeholder="enter password"><br><br>
+        <input type="radio" name="male" id="male"><span id="male">&nbsp; Male</span>&nbsp;&nbsp;
+        <input type="radio" name="male" id="male"><span id="male">&nbsp; Female</span>&nbsp;&nbsp;
+        <input type="radio" name="male" id="male"><span id="male">&nbsp; Other</span>&nbsp;&nbsp;<br><br>
+        <input type="submit" id="sub">
+        </form>
+        </div>
+  </body>
+</html>
