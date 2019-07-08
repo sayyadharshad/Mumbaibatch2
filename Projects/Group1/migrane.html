@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type=""="text/css">
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .info{
+      padding-left: 50px;
+    }
+    .header {
+      overflow: hidden;
+      background-color: #172947;
+      padding: 20px 10px;
+      position: fixed;
+      width:100%;
+      top: 0;
+    }
+    .header a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding:12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: white;
+      color: black;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float: none;
+      }
+    }
+    .footer1{
+      background-color:#172947;
+      padding:1%;
+      padding-left:5%;
+      color:silver;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer1 a{
+      color:white;
+      text-decoration:none;
+    }
+    .footer1 a:hover{
+      color:blue;
+      text-decoration:none;
+      font-size:20px;
+    }
+    .quickmenu,li{
+      padding-bottom:5px;
+    }
+    .fa {
+      padding: 10px;
+      font-size: 10px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+    #emaibox{
+        height:30px;
+        border:none;
+        padding:2%;
+        width:200px;
+        border-radius:5px;
+        font-weight:bold;
+    }
+    #textareabox{
+      border-radius:5px;
+      padding:2%;
+      font-weight:bold;
+    }
+    #sub{
+      height:30px;
+      cursor:pointer;
+      width:100px;
+      color:white;
+      font-weight:bold;
+      border:none;
+      background-color:green;
+      border-radius:5px;
+      font-size:17px;
+    }
+    #sub:hover{
+      opacity: 0.6;
+    }
+    .footer2{
+      color:silver;
+      background-color:black;
+      padding:0.2%;
+      padding-left:1%;
+      text-align:center;
+
+    }
+    #sea{
+      height: 30px;
+      width: 250px;
+      border-radius: 8px;
+      border: none;
+      padding: 1.5%;
+      -webkit-transition: width .40s ease-in-out;
+      transition: width .40s ease-in-out;
+    }
+    #sea:focus{
+      width: 330px;
+    }
+      h1{
+        text-align: center;
+        color: #ff8633;
+        font-size: 50px;
+      }
+      #info1{
+        text-align: center;
+        font-size: 30px;
+        }
+        hr{
+          border-radius: 5px;
+          border-color: black;
+        }
+        p{
+          font-size: 20px;
+          font-style: oblique;
+          color: darkblue;
+        }
+
+        h2{
+          text-align: left;
+          font-style: oblique;
+          color: red;
+        }
+        img {
+          border-radius: 50%;
+        }
+        .temp{
+          margin-top: 100px;
+        }
+
+    </style>
+    </head>
+    <body>
+      <div class="header">
+        <a href="index.html" class="logo">HealthCare</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="search" id="sea"  placeholder="Search..">
+        <div class="header-right">
+          <a class="active" href="#">HOME</a>
+          <a href="login.html">LOGIN/REGISTER</a>
+          <a href="dietician.html">GET A DIETICIAN</a>
+          <a href="contactus.html">CONTACT US</a>
+          <a href="aboutus.html">ABOUT US</a>
+        </div>
+      </div>
+      <div class="temp"></div>
+      <h1>MIGRANE</h1>
+      <p id="info1">Foods that can help</p>
+
+      <table style="text-align:center; ">
+        <tr><td height="400" width="400">
+          <img src="salmon.png" style="width:250px;height:250px; "></<img></td>
+          <td height="400" width="400">
+            <img src="chocolate.png" style="width:250px;height:250px;"></img></td>
+            <td height="400" width="400">
+          <img src="figs.png" style="width:250px;height:250px;"></img></td>
+              </tr>
+              </table>
+              <div class="info">
+                <h2><u>Salmon:</u></h2>
+                <p>Salmon is one of the best foods that help Migraine for several reasons. First, it is rich in omega 3 fatty acids. Omega 3s have been credited with a number of health benefits including reducing the risk of cancer, reducing inflammation, lowering blood pressure, and improving the health of your arteries.</p>
+                <hr><br>
+                <h2><u>Chocolate:</u></h2>
+                <p>Chocolate contains large amounts of magnesium, the “relaxation mineral.” Magnesium is one of the most commonly used minerals for Migraine management, and for good reason. Magnesium is found in all of your body’s tissues, including the brain. It is vital for relaxation and proper sleep, but stress drains magnesium from your body.  </p>
+                <hr><br>
+                <h2><u>Fig:</u></h2>
+                <p>Potassium, in combination with other electrolytes, helps your body fight inflammation. Electrolytes are also essential for combating dehydration, which is very risky for people with Migraine. However, it can be difficult to get enough potassium through your diet.</p>
+              </div>
+                <div>
+                  <div class="footer1">
+                  <div class="quickmenu"><h3>Menu</h3>
+                    <ul style="list-style:none;">
+                      <a href="index.html"><li>HOME</li></a>
+                      <a href="login.html"><li>LOGIN</li></a>
+                      <a href="contactus.html"><li>CONTACT US</li></a>
+                      <a href="aboutus.html"><li>ABOUT US</li></a>
+                      <a href="dietician.html"><li>GET A DIETICIAN</li></a>
+                    </ul>
+                    </div>
+                    <div class="social"><h3>FOLLOW US</h3>
+                      <ul style="list-style:none;">
+                        <a href="#"><li><a href="#" class="fa fa-facebook"></a>&nbsp;HealthCare</li></a>
+                        <a href="#"><li><a href="#" class="fa fa-twitter"></a>&nbsp;Health_Care</li></a>
+                        <a href="#"><li><a href="#" class="fa fa-google"></a>&nbsp;HealthCare@gmail.com</li></a>
+                        <a href="#"><li><a href="#" class="fa fa-instagram"></a>&nbsp;_Health_Care</li></a>
+                      </ul>
+                    </div>
+                    <div class="contactus"><h3>Contact us</h3>
+                      <ul style="list-style:none;">
+                        <a href="#"><li><i class="fa fa-map-marker" style="font-size:35px;"></i>Sector 15, Kopar Khairane,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Navi Mumbai, Maharashtra 400709
+                  </li></a>
+                        <a href="#"><li><i class="fa fa-phone-square" style="font-size:24px"></i>+91 9594054805</li></a>
+                      <a href="#">  <li><i class="fa fa-envelope" style="font-size:24px"></i>HealthCare@gmail.com</li></a>
+                      </ul>
+                    </div>
+                    <div class="message"><h3>Message</h3>
+                      <form>
+                      <ul style="list-style:none;">
+                        <li><input type="email" placeholder="Email" id="emaibox" required></li>
+                        <li><textarea rows="4" cols="24" placeholder="Message" id="textareabox" required></textarea></li>
+                        <li><input type="submit" onclick="myFunction()" id="sub" value="SUBMIT" ></li>
+                      </ul>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="footer2">
+                    <h3>&copy;2019 HealthCare.com ALl Rights Reserved.</h3>
+                  </div>
+    </body>
+  </head>
+
+</html>
