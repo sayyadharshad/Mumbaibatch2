@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Templat</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+  box-sizing: border-box;
+}
+.box {
+  float: left;
+  width: 100%;
+  padding: 50px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: aqua;
+  background-image: url("Bollywood1.jpeg");
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  width: 20%;
+  height: 1145px; /* only for demonstration, should be removed */
+  background: #00FFFF;
+  padding: 30px;
+  float: left;
+  position: fixed;
+  overflow: auto;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+button{
+  margin-bottom: 30px;
+  height:80px;
+  width:100%;
+  background-color:powderblue;
+}
+
+.div1{
+  float: left;
+  width:20%;
+  background-color: pink;
+  text-align: center;
+  font-size: 25px;
+}
+.div2{
+  float: left;
+  width:40%;
+  background-color:blue;
+  text-align: center;
+  font-size: 25px;
+}
+.div3{
+  float: left;
+  width:40%;
+  background-color:red;
+  text-align: center;
+  font-size: 25px;
+}
+.div4{
+  float: left;
+  width:40%;
+  background-color:yellow;
+  text-align: center;
+  font-size: 25px;
+}
+.div5{
+  float: left;
+  width:40%;
+  background-color:violet;
+  text-align: center;
+  font-size: 25px;
+}
+.div6{
+  float: left;
+  width:40%;
+  background-color:pink;
+  text-align: center;
+  font-size: 25px;
+}
+.navarticle{
+  float: left;
+  width:20%;
+  height: 1145px;
+  padding: 5px;
+}
+.mainarticle{
+  float: left;
+  width:80%;
+  height: 1155px;
+
+}
+a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+img{
+float: left;
+ width:20%;
+
+}
+img1{
+  float: center;
+   width:20%;
+  }
+img2{
+  float: center;
+   width:20%;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 20px;
+  text-align: center;
+  color: white
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav,.navarticle,.mainarticle,.div1,.div2,.div3,.div4,.div5,.div6{
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bollywood Stars Info</h1>
+</header>
+
+<section>
+  <article class="navarticle">
+  <nav>
+    <ul>
+      <button><a href="#Active">HOME   </a></button><br>
+      <br>
+      <br>
+      <button><a href="#About us">About us </a></button><br>
+      <br>
+      <br>
+      <button><a href="#Technical">Technical </a></button><br>
+      <br>
+      <br>
+      <button><a href="#Contact us">Contact us </a></button><br>
+
+    </ul>
+  </nav>
+</article>
+
+<article  class="mainarticle">
+ <section>
+    <div class="div1">
+    <p>Born	:15 March 1993 (age 26)
+             Mumbai, Maharashtra, India
+  Citizenship:	British
+     Occupation: Actress,singer
+     Years active: 2012–present
+     Parent(s):	Mahesh Bhatt,
+                Soni Razdan
+    </p>
+  </div>
+  <div class="div2">
+    <p>Alia Bhatt ( born 15 March 1993) is an actress and singer of Indian origin and British citizenship,
+       who works in Hindi films. The recipient of several accolades, including three Filmfare Awards,
+        Bhatt is one of the highest-paid actresses in India.
+   </p>
+ </div>
+<div>
+    <img src="Alia.jpg" alt="Alia">
+</div>
+</section>
+<section>
+  <div  class="div3">
+
+     <p>Born:27 December 1965 (age 53)
+      Indore, Madhya Pradesh, India
+      Residence:	Mumbai, Maharashtra, India
+      Nationality:	Indian
+      Education:	St. Xavier's College, Mumbai
+     Occupation:	Actor,Producer,Singer,Presenter
+     Years active:	1988–present
+     Parent(s):	Salim Khan (father)
+     Seema khan (mother)</p>
+ </div>
+
+    <img class="img1" src="salman.jpg" alt="salman">
+
+
+<div class="div4">
+   <p>Abdul Rashid Salim Salman Khan (born 27 December 1965)is an Indian actor, producer, occasional singer and television personality. In a film career spanning over thirty years, Khan has received numerous awards,
+      including two National Film Awards as a film producer, and two Filmfare Awards for acting.
+   </p>
+ </div>
+</section>
+<section>
+
+    <img class="img2" src="madhuri.jpg" alt="madhuei">
+
+
+
+  <div class="div5">
+     <p>Born:15 May 1967 (age 52)
+       Bombay, Maharashtra, India (present-day Mumbai)
+       Occupation:Actress
+       Years active:1984–present
+       Spouse(s):Shriram Madhav Nene (m. 1999)
+       Children:	2
+       Honours:Padma Shri (2009)
+     </p>
+  </div>
+  <div class="div6">
+    <p>Madhuri Dixit (born 15 May 1967), also known by her married name Madhuri Dixit Nene,is an Indian actress, producer, and television personality.
+
+     </p>
+   </div>
+</section>
+</article>
+</section>
+<footer>
+  <p>©Copyright Reserved</p>
+</footer>
+
+</body>
+</html>
