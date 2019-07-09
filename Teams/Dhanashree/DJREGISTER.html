@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Register Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 align="center">Register Form</h1>
+<form method="get" align="center">
+First Name:<input type="text" pattern="[A-Za-z]{3,}" autocomplete="on" name="first" required><br>
+Last Name:<input type="text" pattern="[A-Za-z]{3,}" autocomplete="on"  name="last" required><br>
+ContactNo:<input type="text" pattern="[0-9]{10}" name="contact" autocomplete="on"required><br>
+Country:
+<select id="drop">
+<option required>Select country</option>
+<option>INDIA</option>
+<option>USA</option>
+</select><br><br>
+
+State:<select id="drop2" required >
+<option>select state</option>
+<option>MAHARASHTRA</option>
+<option>GUJRAT</option>
+<option>RAJASTHAN</option>
+<option>AHAMDABAD</option>
+<option>MADHYAPRADESH</option>
+</SELECT><BR><BR>
+
+City:<select id="drop3" required>
+<option>select CITY</option>
+<option>MUMBAI</option>
+<option>SURAT</option>
+<option>AHAMAD NAGAR</option>
+<option>NASHIK</option>
+<option>PUNE</option>
+</SELECT><BR><BR>
+Emailid:<input type="email" name="email"  autocomplete="on" required><br>
+Age:<input type="number"  min="18" max="50"autocomplete="on" required><br>
+<input type="reset" value="reset">
+<input type="submit" value="submit">
+
+</form>
+</body>
+</html>
