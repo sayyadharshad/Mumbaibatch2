@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <title>
+      Registration Form
+    </title>
+    <style>
+
+    form{
+      padding:2px;
+      margin-left: 30%;
+      margin-right: 25%;
+      margin-top: 5%;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+       body{
+     background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+     background-size: cover;
+     color:white;
+     height: 100vh;
+     padding:0;
+     margin:0; }
+
+     marquee {
+       width: 100%;
+       padding: 20px 0;
+       color: black;
+       background-color: red;
+     }
+
+     </style>
+  </head>
+  Team Soul
+  <body>
+    <Form>
+    <marquee direction="scroll"> REGISTRATION FORM</marquee>
+    <legend>
+
+    <label for="fname">FIRST NAME</label>
+    <input type="text" onkeypress="return onlyAlphabets(event,this);" placeholder="Enter your first name" name="fname" maxlength="40" required><br><br>
+
+    <label for="Lname">LAST NAME</label>
+    <input type="text" placeholder="Enter your last name" name="lname" maxlength="40" required><br><br>
+
+    <label for="Contact">CONTACT NO</label>
+    <input type="tel" id="phone"placeholder="+91" name="phone" onkeypress="return isNumber(event)" maxlength="10"/>
+
+    <span class="note">Format: +91-1234567890</span><br><br>
+
+    <label for="country">Country</label>
+    <select id="country" name="country" >
+      <option>please select below</option>
+
+    </select><br><br>
+
+    <label for="State">STATE</label>
+    <select id="state" name="state" >
+      <option>please select below</option>
+
+    </select><br><br>
+
+    <label for="city">CITY</label>
+    <select id="city" name="city" >
+      <option>please select below</option>
+
+    </select><br><br>
+
+    <label for="email">Email</label>
+    <input type="text onblur="validateEmail(this);" placeholder="xyz@gmail.com" name="email" required><br><br>
+
+    <label for="age">AGE</label>
+    <input type="text" placeholder="Enter your age" name="age" required><br><br>
+
+    <button type="submit" value="Submit" id="submit">Submit</button>
+    <button type="reset" value="Reset" id="reset">Reset</button>
+
+  </Form>
+
+  </body>
+</html>
+<script>
+var stateObject = {
+"India": { "Maharashtra": ["Mumbai", "Ahmednagar","Nashik"],
+"Gujrat": ["Ahmedabad", "Surat"],
+"Rajastan": ["Jaipur", "Jodhpur"],
+},
+"USA": {"Newyork": ["York-town", "Neo-jasey"],
+"washington": ["WashingtonDC"],
+"jiinoice":["Chicago"]
+},
+}
+
+window.onload = function () {
+var countySel = document.getElementById("country"),
+stateSel = document.getElementById("state"),
+districtSel = document.getElementById("city");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+
+function validateEmail(emailField){
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+  if (reg.test(emailField.value) == false)
+  {
+    alert('invalid Email address');
+    return false;
+
+  }
+  return false;
+}
+function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    alert("Please enter only Numbers.");
+    return false;
+  }
+
+  return true;
+}
+
+function onlyAlphabets(e,t){
+  try{
+    if(window.event){
+      var charcode=window.event.keycode;
+    }
+    else if(e){
+      var charcode=e.which;
+    }
+    else{
+      return true;
+    }
+    if((charcode > 64 && charcode < 91) || (charcode>96 && charcode<123))
+    return true;
+    else
+    return false;
+  }
+  catch(err){
+    alert(err.Description);
+  }
+}
+</script>
