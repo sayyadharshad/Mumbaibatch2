@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <title>
+      Register Form
+    </title>
+    <style>
+    .footer{
+      position: fixed;
+      left:0;
+      bottom:0;
+      width:100%;
+      background: transparent;
+      color:white;
+      text-align: center;
+    }
+    form{
+      padding: 2px;
+      margin-left: 30%;
+      margin-right: 25%;
+      margin-top:5%;
+      background:transparent;
+      color:white;
+      font-weight: bold;
+      border-radius:10px;
+    }
+    #submit{
+      margin-left: auto;
+      color=black;
+      background-color: green;
+      height: 40px;
+      weight: 80px;
+    }
+    #Reset{
+      margin-left: auto;
+      color=black;
+      background-color: red;
+      height: 40px;
+      weight: 80px;
+    }
+    .header {
+  padding: 10px 16px;
+  background:transparent;
+  color: white;
+  text-align: center;
+}
+
+    </style>
+  </head>
+<body background="jj.jpg">
+  <div class="header" id="myHeader">
+  <h2>Team Soul</h2>
+</div>
+  <div class="container">
+  <Form>
+    <fieldset>
+      <legend>
+        Register Form:
+      </legend><center>
+    First Name:&nbsp;
+    <input type="text" maxlength="40" onkeypress="return onlyAlphabets(event,this);" name="Firstname" placeholder="fname" title="Enter your FName" autofocus required></br></br>
+    Last Name:&nbsp;
+    <input type="text name="Lastname" maxlength="40" onkeypress="return onlyAlphabets(event,this);" title="Enter your LName" placeholder="lname" required></br></br>
+    Contact No.
+    <input type="text" maxlength="10" onkeypress="return isNumber(event)" placeholder="+91" required></br></br>
+    Country:
+    <select name="Country" id="Country">
+      <option value=""></option>
+    </select></br></br>
+    State:
+    ;
+    <select name="State" id="State">
+    </select></br></br>
+    City:&nbsp;
+    <select name="City" id="City">
+    </select>
+  </br></br>
+    E-mail Id:
+    <input type="email" name="email" onblur="validateEmail(this);" placeholder="xyz@gmail.com" required></br></br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age:
+    <input type="text" placeholder="18-80" id="age" onblur="validateAge();" required></br></br>
+    <input type="Reset" value="Reset" id="Reset">
+    <input type="Submit" value="Submit" id="submit"></center>
+    </fieldset>
+  </form>
+  </div>
+  </br></br>
+  <div class="footer">
+  <p>copyright@TeamSoul
+  </p>
+  </div>
+  </body>
+  </html>
+  <script>
+    function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+function onlyAlphabets(e, t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                    return true;
+                else
+                    return false;
+            }
+            catch (err) {
+                alert(err.Description);
+            }
+        }
+
+
+        function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false)
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+}
+  function validateAge(){
+    var age = +document.getElementById('age').value;
+
+if ( !( age > 18 && age<80 ) ){
+
+        alert("The age must be a number between 18 and 80");
+        return false;
+}
+
+return true;
+  }
+
+var stateObject = {
+"India": { "Maharashtra": ["Mumbai", "Ahmednagar","Nashik"],
+"Gujrat": ["Ahmedabad", "Surat"],
+"Rajastan": ["Jaipur", "Jodhpur"],
+},
+"USA": {"Newyork": ["York-town", "Neo-jasey"],
+"washington": ["WashingtonDC"],
+"jiinoice":["Chicago"]
+},
+}
+
+window.onload = function () {
+var countySel = document.getElementById("Country"),
+stateSel = document.getElementById("State"),
+districtSel = document.getElementById("City");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+  </script>
