@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+  position: fixed;
+  width:100%;
+  top: 0;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: white;
+  color: black;
+}
+
+.header a.active {
+  background-color: white;
+  color: black;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+#sea{
+  height: 30px;
+  width: 250px;
+  border-radius: 8px;
+  border: none;
+  padding: 1.5%;
+  -webkit-transition: width .40s ease-in-out;
+  transition: width .40s ease-in-out;
+}
+#sea:focus{
+  width: 450px;
+}
+.main {
+  padding: 57px;
+  background-color: #76e2e9;
+}
+.info{
+  width: 350px;
+  padding: 3%;
+  background-color: #3686bd;
+  color: white;
+  border-radius: 10px;
+}
+.formpage{
+  margin-top:100px;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+}
+.register{
+  float: right;
+  padding: 2%;
+  border-radius: 10px;
+  background-color:white;
+  width: 490px;
+}
+ input[type="text"],input[type="password"]{
+    border-radius:5px;
+    border: 1px solid #3686bd;
+    padding: 2%;
+    font-weight: bold;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+  background-color: #e2dbdb;
+}
+.btn{
+  height: 40px;
+  width: 150px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1%;
+  border: none;
+}
+.btn:hover{
+  background-color:green;
+  color: white;
+}
+.submit{
+  background-color: #3686bd;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.submit:hover{
+  background-color: #233e50;
+}
+
+.footer2{
+  color:silver;
+  background-color:black;
+  padding:0.2%;
+  padding-left:1%;
+  text-align:center;
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#" class="logo">HealthCare</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="search" id="sea"  placeholder="Search..">
+      <div class="header-right">
+        <a class="active" href="#">HOME</a>
+        <a href="#">LOGIN/REGISTER</a>
+        <a href="#">GET A DIETICIAN</a>
+        <a href="#">CONTACT US</a>
+        <a href="#">ABOUT US</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="formpage">
+        <div class="info">
+          <h2>INFORMATION</h2>
+          <span>Welcome to our website,we give information about health and disease.<br><br>Create your account to get notification and updation<br>
+          <br><br><button class="btn">Have An Account</button></span>
+        </div>
+        <div class="register">
+          <form id="myform" name="myform">
+          <h1 style="color:#3686bd">REGISTER FORM</h1>
+          <input type="text"style="height:30px;width:230px" id="fname" placeholder="First Name" pattern="[A-Za-z]+" title="* ONLY ALPHABETS ARE ALLOW" required>
+          <input type="text"style="height:30px;width:230px;float:right" placeholder="Last Name" pattern="[A-Za-z]+" title="* ONLY ALPHABETS ARE ALLOW" required><br><br>
+          <input type="text" style="height:30px;width:480px;" placeholder="Your Email" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="* PLEASE ENTER VALID EMAIL ID" required><br><br>
+          <input type="text" style="height:30px;width:230px" placeholder="Mobile Number" pattern="[0-9]{10}" title="* PLEASE ENTER VALID MOBILE NUMBER" required><br><br>
+          <input type="password" style="height:30px;width:230px" placeholder="Password" id="password" required>
+          <input type="password" style="height:30px;width:230px" placeholder="Confirm Password" id="password2" onblur="Confirmpassword();" required><br><br>
+          <input type="checkbox"> I agree to the <a href="#" style="font-weight:bold"> Terms and Condition</a><br><br>
+          <input type="submit" style="height:40px;width:130px" class="submit">
+        </form>
+        </div>
+      </div>
+    </div>
+
+        <div class="footer2">
+          <h3>&copy;2019 HealthCare.com ALl Rights Reserved.</h3>
+        </div>
+      </body>
+    </html>
+    <script>
+    function Confirmpassword()
+    {
+      var firstpassword=document.getElementById("password").value;
+      var secondpassword=document.getElementById("password2").value;
+
+      if(firstpassword==secondpassword){
+      return true;
+      }
+      else{
+      alert("password must be same!");
+      return false;
+      }
+    }
+    </script>
