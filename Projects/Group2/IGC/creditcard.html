@@ -1,0 +1,100 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.modle{
+  height: 500px;
+  width: 600px;
+  padding: 3%;
+  font-size: 100%;
+  background: #3500D3;
+  align:center;
+  margin-left: 25%;
+  margin-top: 50px;
+}
+input[type=text] {
+  width: 60%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 2px solid Maroon;
+ box-sizing: border-box;
+
+}
+input[type=number]{
+  width:25%;
+  height: 40px;
+  margin-left: 10px;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 2px solid Maroon;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  align:center;
+  margin-left:  30%;
+}
+div{
+
+  margin-left: 10px;
+  color: white;
+font-size: 18px;
+}
+
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-size: 24px;
+}
+body{
+  background-color: #282828;
+}
+p{
+  color: black;
+}
+
+</style>
+</head>
+<body>
+  <form class="modle">
+    <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:Maroon;"></i>
+              <i class="fa fa-cc-amex" style="color:green;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+    <div>
+Card Holder<br>
+<input type="text" name="name" placeholder="Card holder name"><br>
+Card Number<br>
+<input type="text" name="number" placeholder="card no"><br>
+</div>
+<div >
+  Expiry Date:<br>
+<input type="number" placeholder="MM" >
+<input type= "number" placeholder="YY" >
+</div>
+<div>
+  cvv:<br>
+<input type="number" placeholder="cvv">
+</div>
+<div>
+<button type="submit">pay</button><br>
+
+</div>
+</form>
+</body>
+</html>

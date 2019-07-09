@@ -1,0 +1,123 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Shojumaru&display=swap');
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html" class="logo">IGC</a>
+
+  </a>
+  <!-- <div class="img2">
+    <img src="IGCLOGO.png">
+  </div> -->
+  <div class="header-right">
+    <a href="index.html">Home</a>
+    <a href="Tournament.html">Tournaments</a>
+    <a class="active" href="login.html">Login</a>
+    <a href="signup.html">SignUp</a>
+  </div>
+</div>
+<h1 style="text-align:center; font-size:50px;"><i style="color:white;">Sign UP</i></h1>
+
+<form name="form1" action="php/register.php">
+  <div class="container">
+  <div>
+<label><i>First Name:</i></label>
+<input type="text" maxlength="40" id="fname" onblur="return validate()" style="width:200px;height:30px;" placeholder="First Name" name="fname" required><br><br>
+<label><i>Last Name:</i></label>
+<input type="text" maxlength="40" id="lname" onkeypress="return onlyAlphabets(e,t);" style="width:200px;height:30px;" placeholder="Last Name" name="lname" required></br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label><i>E-mail:</i></label>
+<input type="email" id="email" style="width:200px;height:30px;" onblur="validateEmail(this);" placeholder="Enter Email" name="email" required></br></br>
+&nbsp<label><i>Password:</i></label>
+<input type="password" id="password" style="width:200px;height:30px;" placeholder="Enter Password" required></br></br>
+&nbsp&nbsp&nbsp&nbsp<label><i>Country:</i></label>
+<select name="Country" style="width:200px;height:30px;" id="Country" placeholder="Country">
+  <option value=""></option>
+</select><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label><i>State:</i></label>
+<select name="State" style="width:200px;height:30px;" id="State" placeholder="State">
+</select></br></br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label><i>City:</i></label>
+<select name="City" style="width:200px;height:30px;" id="City"></select>
+</br></br>
+&nbsp&nbsp&nbsp<label><i>Birthday:</i></label>
+<input type="date"style="width:200px;height:30px;" id="birth" placeholder="Birthday" required></br></br>
+<div class="submit">
+  <input type="submit" id="submit" value="Submit">
+  <input type="reset" id="Reset" value="Reset">
+
+</div>
+<hr>
+</div>
+</form>
+
+</body>
+</html>
+<script type="text/javascript">
+function validate() {
+    if (document.myForm.name.value == "") {
+        alert("Enter a name");
+        document.myForm.name.focus();
+        return false;
+    }
+    if (!/^[a-zA-Z]*$/g.test(document.myForm.name.value)) {
+        alert("Invalid characters");
+        document.myForm.name.focus();
+        return false;
+    }
+}
+        function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false)
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+}
+
+var stateObject = {
+"India": { "Delhi": ["new Delhi", "North Delhi"],
+"Kerala": ["Thiruvananthapuram", "Palakkad"],
+"Goa": ["North Goa", "South Goa"],
+},
+"Australia": {
+"South Australia": ["Dunstan", "Mitchell"],
+"Victoria": ["Altona", "Euroa"]
+}, "Canada": {
+"Alberta": ["Acadia", "Bighorn"],
+"Columbia": ["Washington", ""]
+},
+}
+window.onload = function () {
+var Country = document.getElementById("Country"),
+State = document.getElementById("State"),
+City = document.getElementById("City");
+for (var country in stateObject) {
+Country.options[Country.options.length] = new Option(country, country);
+}
+Country.onchange = function () {
+State.length = 1; // remove all options bar first
+City.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+State.options[State.options.length] = new Option(state, state);
+}
+}
+Country.onchange(); // reset in case page is reloaded
+State.onchange = function () {
+City.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[Country.value][this.value];
+for (var i = 0; i < district.length; i++) {
+City.options[City.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+</script>
