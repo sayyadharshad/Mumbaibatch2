@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  text-align: center;
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu {
+  padding:150px;
+  margin-top:px;
+  background-color: #33b5e5;
+  color: #ffffff;
+
+  height:800px;
+  width:100%;
+  text-align:center;
+}
+
+.menu :hover {
+  text-align:center;
+  background-color:red;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 600px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  .menu{
+    position: fixed;
+  }
+
+  var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("menu").style.top = "0";
+  } else {
+    document.getElementById("menu").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Bollywood Stars Info</h1>
+</div>
+
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+      <input type="button" value="Home" /></br><br/>
+      <input type="button" value="About us"/></br><br/>
+      <input type="button" value="Testimaniual"/></br><br/>
+      <input type="button" value="Contact us"/>
+
+  </div>
+
+  <div class="col-3 col-s-6 col-s-9">
+      <h1>Paragraph1</h1>
+      <p>The title track of Pyaar To Hona Hi Tha, the Ajay Devgn-Kajol starrer that released in 1998, was pathbreaking in more ways than one. It was the first time that VFX was used in Bollywood. </p>
+  </div>
+
+    <div class="col-3 col-s-6 col-s-9">
+        <h1>Paragraph2</h1>
+        <p>It was also the first film to start the concept of a promotional video in the Hindi film industry. And actor-filmmaker Ajay Devgn claims credit for both innovations.</p>
+      </div>
+
+  <div class="img">
+    <div class="col-3 col-s-6 col-s-9">
+     <img src="AjayDevgn.jpg" width="300px" height="200px" alt="AjayDevgn">
+   </div>
+  </div>
+
+  <div class="col-3 col-s-6 col-s-9">
+      <h1>Paragraph3</h1>
+      <p><h5>Did you know that Kartik Aaryan was rejected on his first audition even before he auditioned?</h5>Kartik Aaryan has very successfully made his way to the top with his sheer hard work and some stunning performances</p></br></br></br>
+<img src="salman.jpg" width="300px" height="200px" alt="abc">
+    </div>
+
+    <div class="img">
+      <div class="col-3 col-s-6 col-s-9"></br>
+       <img src="kartikaaryan.jpg" width="300px" height="200px" alt="kartikaaryan"></br></br></br>
+       <h1>Paragraph5</h1>
+       <p>Salman Khan and Katrina Kaif's film 'Bharat' has been on a juggernaut run at the box-office since its release. The film which is helmed by Ali Abbas Zafar has been the talk of the town since its inception and now that the film has released it has been appreciated from all quarters.</p>
+     </div>
+     </div>
+
+    <div class="col-3 col-s-6 col-s-9">
+        <h1>Paragraph4</h1>
+      <p>However, did you know that Kartik Aaryan was rejected on his first audition even before he showed his act? Yes, you read it right! According to reports, Kartik’s was rejected on his first ever audition even before he could show his act to the makers. He had apparently gone for the auditions of a deodorant commercial.</p></br>
+        <h1>Paragraph6</h1>
+        <p>Not only Salman's fans in India but even the Indian cricket team watched the film in Nottingham yesterday and Kedar Jadhav took to social media to share a picture post the film. He captioned it as "BHARAT KI TEAM ❤️ BHARAT MOVIE KE BAAD 🎬 .</p>
+      </div>
+
+</div>
+
+<div class="footer">
+  <p><h2>CopyRight Reseved<sup>TM</sup></h2></p>
+</div>
+
+</body>
+</html>

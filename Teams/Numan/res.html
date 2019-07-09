@@ -1,0 +1,152 @@
+<html>
+<head><title>Registration Form</title>
+</head>
+<style>
+h1{
+  background-color: red;
+  }body{
+    background-image: url('abc.jpg');
+  }
+  </style>
+<body align="center">
+  <h1>Resgistration From</h1>
+  <table align="center" cellpading="10" border="1">
+  <tr>
+<td>
+  <font color="white"> First name:</font></td><td><input type="text" placeholder="Fname" onkeypress="return onlyAlphabets(event,this);" name="text first name:" maxlength="40"/>
+</td>
+</tr>
+<tr>
+<td>
+  <font color="white"> Last name:</font></td><td><input type="text" placeholder="Lname" onkeypress="return onlyAlphabets(event,this);" name="text last name:" maxlength="30"/>
+  </td>
+</tr>
+<tr>
+  <td><font color="white"> Contact no:</font></td><td><input type="text" placeholder="Numbers"  onkeypress="return isNumber(event)" contact="contact no:" maxlength="10"/>
+  </td>
+</tr>
+<tr>
+<td><font color="white"> Country:</font></td>
+<td>
+  <select name="country" id="countySel">
+    <option value="" selected="selected" disabled="disabled">country</option>
+  </select>
+</td>
+</tr>
+<tr>
+  <td><font color="white"> State:</font></td>
+  <td>
+<select name="state" id="stateSel">
+<option value="" selected="selected" disabled="disabled">state</option>
+</select>
+</td>
+</tr>
+<tr>
+  <td><font color="white"> City:</font></td>
+  <td>
+  <select name="city" id="districtSel">
+  <option value="1" selected="selected" disabled="disabled">city</option>
+</select>
+  </td>
+  </tr>
+<tr>
+<td><font color="white"> Enter your email:</font></td>
+<td><input type="text" id="email" pattern=".+@globex.com" placeholder="Enter your globex.com email" size="30" required></td>
+</tr>
+<tr>
+<td><font color="white"> Age:</font></td><td><input type="text" placeholder="18 to 80" onkeypress="return validateAge()" age="Age:" maxlength="30"/>
+</td>
+</tr>
+<tr>
+<form action="">
+<td>
+  <button type="reset" value="Reset">Reset</button></td>
+<td colspan="2">
+  <button type="submit" value="Submit">Submit</button>
+</td>
+</form>
+</tr>
+</table>
+
+<script>
+function onlyAlphabets(e, t) {
+           try {
+               if (window.event) {
+                   var charCode = window.event.keyCode;
+               }
+               else if (e) {
+                   var charCode = e.which;
+               }
+               else { return true; }
+               if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                   return true;
+               else
+                   return false;
+           }
+           catch (err) {
+               alert(err.Description);
+           }
+       }
+
+
+
+       function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    alert("Please enter only Numbers.");
+    return false;
+  }
+
+  return true;
+}
+
+var stateObject = {
+"India": { "Maharashtra": ["Mumbai", "Ahmednagar","Nashik"],
+"Gujrat": ["Ahmedabad", "Surat"],
+"Rajastan": ["Jaipur", "Jodhpur"],
+},
+"USA": {"Newyork": ["York-town", "Neo-jasey"],
+"washington": ["WashingtonDC"],
+"jiinoice":["Chicago"]
+},
+}
+
+window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel"),
+districtSel = document.getElementById("districtSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+
+function validateAge(){
+  var age= +document.getElementById('age1').value;
+  if(!(age > 18 && age < 80)){
+    alter("This age must be a number between 18 to 80");
+    return false;
+  }
+  return true;
+}
+
+
+</script>
+</body></html>
