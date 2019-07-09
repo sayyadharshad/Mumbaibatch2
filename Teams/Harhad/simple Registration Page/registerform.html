@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title></title>
+	<style>
+
+		body{
+			background-image:url("back.png");
+			
+			
+		}
+		form{
+			border:3px solid white;
+			padding:2%;
+			margin-left:30%;
+			margin-right:25%;
+			margin-top:5%;
+			background:transparent;
+			color:white;
+			font-weight:bold;
+			border-radius:10px;
+		}
+		input{
+			padding:1%;
+		}
+		#submit{
+			background-color:orange;
+			height:40px;
+			width:100px;
+			border:none;
+			cursor:pointer;
+			font-weight:bold;
+			font-size:20px;
+			margin-left:30%;
+		}
+
+		#select{
+			height:30px;
+			width:100px;
+			font-size:20px;
+		}
+	</style>
+	</head>
+	<body>
+	<div class="container">
+	<form>
+		<h2>Register Form</h2>
+		<input type="text" style="height:30px;width:200px" placeholder="First Name" id="fname" autofocus required>
+		<input type="text" style="height:30px;width:200px" placeholder="Last Name" id="lname" required></br></br>
+		<input type="Email" style="height:30px;width:200px" placeholder="Email" id="email" required>
+		<input type="text" style="height:30px;width:200px" placeholder="Mobile Number" id="mobnum" pattern="[0-9]{10}" required> </br></br>
+		<span>Know languages&nbsp;&nbsp;&nbsp;</span><input type="checkbox" value="English">English &nbsp;&nbsp;<input type="checkbox" 			value="English">Hindi &nbsp;&nbsp;<input type="checkbox" value="English">Marathi</br></br>
+		<span>Select your City&nbsp;&nbsp;&nbsp;</span>
+		<select name="City" id="select">
+    		<option value="Mumbai">Mumbai</option>
+    		<option value="Pune">Pune</option>
+    		<option value="Nashik">Nashik</option>
+    		<option value="Thane">Thane</option>
+  		</select></br></br>
+		<span>Gender&nbsp;&nbsp;&nbsp;</span>
+		<input type="radio" name="Gender">Male <input type="radio" name="Gender">Female </br></br>
+<span>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<textarea rows="4" cols="30" placeholder="example:building Name,floor Number,etc" required>
+</textarea></br></br>
+<span>Birthdate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<input type="date"><br><br>
+<input type="password" style="height:30px;width:200px" placeholder="Password" required>
+<input type="password" style="height:30px;width:200px" placeholder="Confirm Password" required><br><br>
+<input type="submit" onclick="test()" id="submit" value="Submit">
+	<h1 id="fname1"></h1>
+	<h1 id="lname2"></h1>
+	</form>
+	</div>
+	</body>
+</html>
+<script>
+	function test()
+	{
+		var fname=document.getElementById("fname").value;
+		var lname=document.getElementById("lname").value;
+		window.alert("Welcome "+fname+" "+lname);
+	}
+</script>
