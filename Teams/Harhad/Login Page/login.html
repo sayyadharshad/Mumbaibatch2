@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #76e2e9;
+  }
+
+  .header {
+    overflow: hidden;
+    background-color: black;
+    padding: 20px 10px;
+    position: fixed;
+    width:100%;
+    top: 0;
+  }
+
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .header a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .header a.active {
+    background-color: white;
+    color: black;
+  }
+
+  .header-right {
+    float: right;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .header-right {
+      float: none;
+    }
+  }
+  .footer2{
+    color:silver;
+    background-color:black;
+    padding:0.2%;
+    padding-left:1%;
+    text-align:center;
+
+  }
+  #sea{
+    height: 30px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    padding: 1.5%;
+    -webkit-transition: width .40s ease-in-out;
+    transition: width .40s ease-in-out;
+  }
+  #sea:focus{
+    width: 450px;
+  }
+  form{
+    padding: 1%;
+  }
+.loginbox{
+  border:1px solid black;
+  margin-left:35%;
+  margin-right:35%;
+  padding:2%;
+  border-radius: 10px;
+  color: black;
+  text-align:center;
+  background-color: white;
+}
+input[type="text"],input[type="password"]
+{
+  height:40px;
+  padding-left: 2%;
+  width:200px;
+  font-size: 17px;
+  background-color:transparent;
+  border:none;
+  border-bottom:1px solid black;
+  font-weight:bold;
+  -webkit-transition: width .40s ease-in-out;
+  transition: width .40s ease-in-out;
+  outline: 0;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+  width: 250px;
+}
+.temp{
+  margin-top:73px;
+}
+#logbtn{
+  height:40px;
+  width:200px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  color:white;
+  background-color:#59afe7;
+  border:none;
+}
+#logbtn:hover{
+  background-color: blue;
+}
+</style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#" class="logo">HealthCare</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="search" id="sea"  placeholder="Search..">
+      <div class="header-right">
+        <a class="active" href="#">HOME</a>
+        <a href="#">LOGIN/REGISTER</a>
+        <a href="#">GET A DIETICIAN</a>
+        <a href="#">CONTACT US</a>
+        <a href="#">ABOUT US</a>
+      </div>
+    </div>
+    <br>
+  <div class="temp"></div>
+    <form>
+        <div class="loginbox">
+          <center><img src="user.png" alt="user" height="150" width="150"></center><br><br>
+          <input type="text" placeholder="Email" required><br><br>
+          <input type="password" placeholder="Password" required><br><br>
+          <span style="margin-right:140px;font-size:15px;"><input type="checkbox"> Remember me </span><br><br>
+          <input type="submit" id="logbtn" value="LOGIN"><br><br><br>
+          <a href="register.html"><span style="float:left;font-size:18px;">Register</span></a>
+          <a href="#"><span style="float:right;font-size:18px;">Forget your password?</span></a>
+          <br>
+        </div>
+      </form>
+      <br>
+      <div class="footer2">
+        <h3>&copy;2019 HealthCare.com ALl Rights Reserved.</h3>
+      </div>
+  </body>
+</html>
