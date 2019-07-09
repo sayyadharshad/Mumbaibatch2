@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 0px;
+  cursor: pointer;
+}
+.button1 {border-radius: 0px;}
+
+</style>
+</head>
+<body>
+
+<h2>Chat Messages</h2>
+
+<div class="container">
+  <img src="Ali.jpg" alt="img" style="width:50px;height:50px;">
+  <p>Hello.. pratiksha</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="pratu3.jpg" alt="img" class="right" style="width:50px;height:50px;">
+  <p>Hey!..Ali</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="Ali.jpg" alt="img"  style="width:50px;height:50px;">
+  <p> what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="pratu3.jpg" alt="img" class="right" style="width:50px;height:50px;">
+  <p>Nothing, you?</p>
+  <span class="time-left">11:05</span>
+</div>
+<div class="chat-text">
+  <input type="text" placeholder="type message..................s" size="97" style="width:800px;height:50px;">
+</div>
+<button class="button button1">send</button>
+
+</body>
+</html>

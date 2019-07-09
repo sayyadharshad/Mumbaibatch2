@@ -1,0 +1,84 @@
+<html>
+
+	<title>Chatzone Style Homepage Design using HTML and CSS</title>
+	<head>
+		<link type="text/css" rel="stylesheet" href="login.css" />
+		<meta name="Description" content="Chatzone Style Homepage Design with Login Form registration for using html and CSS"/>
+
+
+	</head>
+	<body>
+		<div class="fb-header-base">
+		</div>
+		<div class="fb-header">
+			<div id="img1" class="fb-header"><img src="" style="width:50px;height:50px"; alt="img1" /></div>
+			<div id="form1" class="fb-header">Email or Phone<br>
+			<input placeholder="Email" type="mail" onblur="validateEmail(this);" name="name" size="30" required/><br>
+			<input type="checkbox" />keep me logged in</div>
+
+			<div id="form2" class="fb-header">Password<br>
+			<input placeholder="Password" type="password" name="password" /><br>
+			Forgotten your password?
+			</div>
+			</div>
+		</div>
+		<a href="home11.html"><input type="submit"  class="submit1" value="login"/></a>
+		<div class="fb-body">
+			<div id="intro1" class="fb-body">Chatzone helps you to find freinds and share with the <br>
+			people in your life.</div>
+			<div id="intro2" class="fb-body">Create an account</div>
+			<div id="img2" class="fb-body"><img src="" style="width:300px;height:300px" alt=img2""/></div>
+			<div id="intro3" class="fb-body">It's free and always will be.</div>
+			<div id="form3" class="fb-body">
+				<input placeholder="First Name" type="text" id="namebox" name="name1" />
+				<input placeholder="Last Name" type="text" id="namebox"  /> <br>
+				<input type="text" onblur="validateEmail(this);" placeholder="Email"  type="text" id="mailbox" /><br>
+				<input placeholder="Password1"  name="password1" size=25 type="password" id="txtPassword"/><br>
+				<input placeholder="password2"  name="password2" size=25 type="password" id="txtConfirmPassword"/><br>
+
+				<input type="date" id="namebox"  /><br><br>
+				<input type="radio" id="r-b" name="sex" value="male" />Male
+				<input type="radio" id="r-b" name="sex" value="female" />Female<br><br>
+				<p id="intro4">By clicking Create an account, you agree to our Terms and that
+				you have read our Data Policy, including our Cookie Use.</p>
+				<input type="button" id="button2" value="Submit" onclick="return Validate()" />
+
+
+
+			</div>
+
+		</div>
+
+			<div class="footer">
+			  <p> &nbsp <strong>Englise Uk</strong> &nbsp मराठी &nbsp हिन्दी &nbsp اردو &nbsp ગુજરાતી &nbsp ಕನ್ನಡ &nbsp
+			 ਪੰਜਾਬੀ &nbsp தமிழ் &nbsp বাংলা &nbsp తెలుగు &nbsp മലയാളം
+			</p>
+			<p> &nbsp Sign Up &nbsp Log In &nbsp Messenger &nbsp Facebook Lite &nbsp Watch People Profiles Pages &nbspPage categories &nbsp
+			  Events Places &nbsp Games &nbsp Locations &nbsp Instagram &nbsp About</p>
+			  <p> &nbsp ChatZone © 2019</p >
+			</div>
+	</body>
+	<script>
+	function validateEmail(emailField){
+	  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+	  if (reg.test(emailField.value) == false)
+	  {
+	    alert('invalid Email address');
+	    return false;
+
+	  }
+	  return false;
+	}
+	function Validate() {
+var password = document.getElementById("txtPassword").value;
+var confirmPassword = document.getElementById("txtConfirmPassword").value;
+if (password != confirmPassword) {
+	alert("Passwords do not match.");
+	return false;
+}
+return true;
+}
+	</script>
+
+</html>
