@@ -1,0 +1,63 @@
+
+body{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background:url(watch_dogs.jpg );
+      background-attachment: fixed;
+    }
+header{
+  position:relative;
+  max-width: 1200px;
+  margin:20px auto;
+  padding: 20px;
+  background: #000066;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px rgba(0,0,0,.2);
+
+}
+.logo{
+  color: white;
+  height:60px;
+  /* width:60px; */
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  background: black;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}
+nav{
+  float:left;
+}
+.clearfix{
+  clear:both;
+}
+nav ul{
+  margin:0;
+  padding: 0;
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+}
+nav ul li a{
+  display: block;
+  margin: 3px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+
+}
+nav ul li a.active
+nav ul li a:hover
+  {
+    background: #069370;
+    color:blue;
+    transition: 0.5s;
+  }
