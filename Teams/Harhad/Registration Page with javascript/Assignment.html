@@ -1,0 +1,236 @@
+<html>
+  <head>
+        <title>Team Soul | Registration Form</title>
+        <style>
+body{
+background-color:#4077c9 !important;
+margin: 0;
+}
+header{
+padding:0.3%;
+background:black;
+color:white;
+font-weight:bold;
+}
+footer{
+padding:0.7%;
+background:black;
+color:white;
+margin-top:30px;
+}
+        .Form1{
+            border: 4px solid #8842d5;
+            padding:1%;
+            margin-left:35%;
+width:390px;
+font-weight:bold;
+margin-top:5px;
+background-color:#f2f3f7;
+border-radius: 20px;
+
+        }
+        #notification,#notification_one,#notification_two,#notification_three,#notification_four{
+          float: right;
+ color:red;
+        }
+input[type=text]{
+font-weight:bold;
+padding:2%;
+border: 2px solid #8842d5;
+border-radius: 5px;
+}
+hr{
+border:1px solid black !important;
+border-radius:10px !important;
+}
+#rst,#sub{
+height:30px;
+width:80px;
+margin-left:15%;
+border:none;
+background-color:#67de67;
+}
+#rst:hover,#sub:hover{
+background-color:green;
+color:white;
+}
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 style="margin-left:5%;">Team Soul</h1>
+    </header>
+    <form name="myForm" onsubmit="return validateForm()">
+         <div class="Form1">
+<h3 style="text-align:center;">Registration Form</h3>
+<hr>
+           First Name : <input type="text" id="fname" onblur="onlyAlpha();" style="height:30px;width:200px;" maxlength="40" ><div id="notification"></div><br><br>
+           Last Name  : <input type="text" id="lname" style="height:30px;width:200px" onblur="onlyAlphaL();" maxlength="40" ><div id="notification_one"></div><br><br>
+           Contact No : <input type="text" id="Mob" style="height:30px;width:200px" onblur="onlyAlphaC();" ><div id="notification_two"></div><br><br>
+           Country :&nbsp;&nbsp;&nbsp;&nbsp;<select id="country" onchange="configureDropDownLists(this,document.getElementById('State'))">
+             <option value=""></option>
+             <option value="India">India</option>
+             <option value="USA">USA</option>
+           </select><br><br>
+           State :&nbsp;&nbsp;&nbsp;&nbsp;<select id="State">
+             <option value="Maharastra"></option>
+             <option value="NewYork"></option>
+           </select><br><br>
+           Email-ID  : <input type="text" id="Email" style="height:30px;width:200px" onblur="onlyAlphaE();" ><div id="notification_three"></div><br><br>
+           Age  :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="age" onblur="onlyAlphaA();" onkeypress="return isNumber(event)" style="height:30px;width:200px" ><div id="notification_four"></div><br><br><br>
+           <input type="reset" id="rst">
+           <input type="submit" value="SUBMIT" onclick="sub()" id="sub">
+         </div>
+    </form>
+<footer>
+<h4 style="text-align:center;"> &copy; all rights reserved Team Soul</h4>
+</footer>
+  </body>
+</html>
+<script>
+function validateForm() {
+  var fname = document.forms["myForm"]["fname"].value;
+  var lname = document.forms["myForm"]["lname"].value;
+  var Mob = document.forms["myForm"]["Mob"].value;
+  var Email = document.forms["myForm"]["Email"].value;
+  var age = document.forms["myForm"]["age"].value;
+  if (fname == "") {
+    alert("First Name must be filled out");
+    document.getElementById("fname").focus();
+    return false;
+  }
+  else if(lname ==""){
+    alert("Last Name must be filled out");
+    document.getElementById("lname").focus();
+    return false;
+  }
+  else if(Mob ==""){
+     alert("Contact Number must be filled out");
+     document.getElementById("Mob").focus();
+     return false;
+  }
+  else if(Email==""){
+    alert("Email must be filled out");
+    document.getElementById("Email").focus();
+    return false;
+  }
+  else if(age==""){
+    alert("Age must be filled out");
+    document.getElementById("age").focus();
+    return false;
+  }
+  else
+	{
+		alert("Welcome "+fname+" "+lname+"\nYour Contact No. "+Mob+"\nYour Email ID "+Email+"\nYour Age is "+age);
+	}
+}
+function onlyAlpha()
+{
+  var regex = /^[a-zA-Z]*$/;
+    if (regex.test(document.myForm.fname.value)) {
+document.getElementById("notification").innerHTML = "";
+        return true;
+    }
+    else {
+        document.getElementById("notification").innerHTML = "Alphabets Only";
+return true;
+    }
+}
+function onlyAlphaL()
+{
+var regex = /^[a-zA-Z]*$/;
+    if (regex.test(document.myForm.lname.value)) {
+document.getElementById("notification_one").innerHTML = "";
+        return true;
+    }
+    else {
+        document.getElementById("notification_one").innerHTML = "Alphabets Only";
+return true;
+    }
+}
+function onlyAlphaC()
+{
+var regex = /^\d{10}$/;
+    if (regex.test(document.myForm.Mob.value)) {
+document.getElementById("notification_two").innerHTML = "";
+        return true;
+    }
+    else {
+        document.getElementById("notification_two").innerHTML = "Please enter valid mobile number.";
+return true;
+    }
+}
+function onlyAlphaE()
+{
+var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (regex.test(document.myForm.Email.value)) {
+document.getElementById("notification_three").innerHTML = "";
+        return true;
+    }
+    else {
+        document.getElementById("notification_three").innerHTML = "Please enter valid Email-ID.";
+return true;
+    }
+}
+function onlyAlphaA()
+{
+var AgeVal =document.getElementById("age").value;
+if(AgeVal < 0)
+{
+document.getElementById("notification_four").innerHTML="Negative number is not allow";
+}
+else if(AgeVal < 18)
+{
+document.getElementById("notification_four").innerHTML="Please enter age between 18 to 80";
+}
+else if(AgeVal > 80)
+{
+document.getElementById("notification_four").innerHTML="Please enter age between 18 to 80";
+}
+else
+{
+document.getElementById("notification_four").innerHTML= "";
+}
+}
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+function configureDropDownLists(Country,State) {
+var India = ['Maharastra', 'Gujrat', 'Rajisthan'];
+var USA = ['NewYork', 'washington', 'Alaska'];
+
+switch (Country.value) {
+  case 'India':
+    State.options.length = 0;
+    for (i = 0; i < India.length; i++) {
+      createOption(State, India[i], India[i]);
+    }
+    break;
+  case 'USA':
+    State.options.length = 0;
+    for (i = 0; i < USA.length; i++) {
+      createOption(State, USA[i], USA[i]);
+    }
+    break;
+  default:
+    State.options.length = 0;
+    break;
+}
+}
+function createOption(Country, text, value) {
+var opt = document.createElement('option');
+opt.value = value;
+opt.text = text;
+Country.options.add(opt);
+}
+
+</script>
