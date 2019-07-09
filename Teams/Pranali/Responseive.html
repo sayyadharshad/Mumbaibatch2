@@ -1,0 +1,87 @@
+<!DOCKTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+    body{
+      font-family:Arial, Helvetica,sans-serif;
+    }
+    button{
+      padding:5px;
+      height:30px;
+      weight:15px;
+      
+    }
+    header{
+      background-image:url(img4.jpg);
+      padding:30px;
+      text-align:center;
+      font-size:35px;
+      color:yellow;
+    }
+    nav{
+      float: left;
+      width: 20%;
+      height: 600px; /* only for demonstration, should be removed */
+      background: #ccc;
+      padding: 20px;
+    }
+    nav ul{
+      list-style-type:none;
+      padding:0;
+    }
+    article{
+      -webkit-flex:3;
+      -ms-flex:3;
+      flex:3;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    footer{
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: yellow;
+    }
+    @media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Bollywood Starts Info</h2>
+  </header>
+  <section>
+  <nav>
+    <ul>
+      <li><button type="button" name="Home">Home</button></li><br>
+      <li><button type="button" name="About us">About us</button></li><br>
+      <li><button type="button" name="Testimonials">Testimonials</button></li><br>
+      <li><button type="button" name="Contact us">Contact us</button></li><br>
+      </ul>
+  </nav>
+
+  <article>
+    <table>
+          <tr><td><p>Bollywood, an Indian Hollywood, refers to the Hindi language movie industry in India.The word is often used to describe Indian cinema as a whole, but more precisely it means Hindi language movies only. The term Bollywood combines Bombay (where most Hindi movies are made) and Hollywood (where most American movies are made).Bollywood makes many movies each year.</p><td><p>Many Bollywood movies are called Masala movies. In Hindi, Masala means spice. These movies usually have higher levels of emotions, songs, revenge, and differences between rich and poor in them.</p></td><td><img src="img.jpeg" alt="Flowers in Chania" width="170" height="170" style="float:right"></td></tr>
+          <tr><td><p>The movies made in Bollywood are usually in Hindi. Hindustani, the part common to both Hindi and Urdu is probably a more correct description. Bollywood makes movies in the languages of Hindi, Urdu and English. Often, poetic Urdu words are used; see also Lollywood (Pakistan Cinema).</p></td><td><img src="img2.jpeg" alt="Flowers in Chania" width="170" height="170" style="float:right"></td><td><p>Bollywood ways of doing things are changing, however. A large Indian diaspora in English speaking countries, and increased Western influence at home, have moved Bollywood movies closer to movies made in Hollywood.</p></td></tr>
+          <tr><td><img src="img3.jpeg" alt="Flowers in Chania" width="170" height="170" style="float:right"></td><td><p>The number of dialogues and songs in English has increased lately. There are movies now where parts of the dialogue are in English. There is also a growing number of movies which are in English. Some movies are also made in more than one language. This is either done with subtitles, or by using several soundtracks</p></td><td><p>Movie critic Lata Khubchandani writes,"..our earliest movies...(had) liberal doses of sex and kissing scenes in them. Strangely, it was after Independence the censor board came into being and so did all the strictures.</p></td></tr>
+        </table>
+  </article>
+</section>
+  <footer>
+    <p>Footer</p>
+  </footer>
+</body>
